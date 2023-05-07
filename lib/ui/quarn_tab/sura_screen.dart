@@ -59,7 +59,7 @@ class _SuraScreenState extends State<SuraScreen> {
                   Expanded(
                     child: ListView.separated(
                       itemBuilder: (context, index) => Text(
-                        "${suraContent[index]}﴿$index﴾",
+                        "${suraContent[index]}﴿${index+1}﴾",
                         textDirection: TextDirection.rtl,
                         style: const TextStyle(
                           fontSize: 20,
@@ -84,7 +84,7 @@ class _SuraScreenState extends State<SuraScreen> {
 
   void loadFromFile(int index) async {
     String sura_content =
-        await rootBundle.loadString("assets/suras_files/$index.txt");
+    await rootBundle.loadString("assets/suras_files/$index.txt");
 
     suraContent = sura_content.split("\n");
     for (int i = suraContent.length - 1; i >= 0; i--) {

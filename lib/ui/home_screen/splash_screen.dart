@@ -13,6 +13,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     });
+
     return Image.asset(
       "assets/images/splash.png",
       width: double.infinity,
